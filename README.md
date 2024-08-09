@@ -1,3 +1,3 @@
 # AlbertaGameJam_2024
 
-Hello world!
+Welcome to the AGJ 2024!
