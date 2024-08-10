@@ -1,45 +1,109 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1wlsoy53i0fg"]
+[gd_scene load_steps=13 format=3 uid="uid://c1wlsoy53i0fg"]
 
-[ext_resource type="Script" path="res://Assets/Scenes/Maincam.gd" id="1_65psk"]
-[ext_resource type="Texture2D" uid="uid://ghndqyu2fmwh" path="res://Assets/Vending Machine.png" id="1_marg0"]
+[ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="1_65psk"]
+[ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_i8vgr"]
+[ext_resource type="Texture2D" uid="uid://ghndqyu2fmwh" path="res://Assets/Sprites/Vending Machine.png" id="1_marg0"]
+[ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="4_aki0s"]
+[ext_resource type="Texture2D" uid="uid://ctthrny22fru8" path="res://Assets/Sprites/Vending Base1.png" id="5_b66he"]
+[ext_resource type="Texture2D" uid="uid://2a15j7xyg3is" path="res://Assets/Sprites/placeholderbutton.png" id="6_3gegj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
 size = Vector2(150, 20)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2uu4"]
+atlas = ExtResource("6_3gegj")
+region = Rect2(0, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leumd"]
+atlas = ExtResource("6_3gegj")
+region = Rect2(150, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8xfp"]
+atlas = ExtResource("6_3gegj")
+region = Rect2(300, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8vux"]
+atlas = ExtResource("6_3gegj")
+region = Rect2(450, 0, 150, 179)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f31y5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2uu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leumd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8xfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8vux")
+}],
+"loop": true,
+"name": &"123",
+"speed": 5.0
+}]
+
 [node name="Game" type="Node2D"]
+script = ExtResource("1_i8vgr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 32.75)
 zoom = Vector2(9.6, 9.6)
 editor_draw_limits = true
 script = ExtResource("1_65psk")
+metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="Camera2D"]
+[node name="Upper Cam Collision" type="Area2D" parent="Camera2D"]
 position = Vector2(0, -47)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Upper Cam Collision"]
 shape = SubResource("RectangleShape2D_ulrms")
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Upper Cam Collision"]
 visible = false
 scale = Vector2(0.11, 0.11)
 texture = ExtResource("1_marg0")
 
-[node name="Area2D2" type="Area2D" parent="Camera2D"]
+[node name="Lower Cam Collision" type="Area2D" parent="Camera2D"]
 position = Vector2(0, 46)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Lower Cam Collision"]
+position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_ulrms")
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Lower Cam Collision"]
 visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_marg0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_marg0")
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("4_aki0s")
+metadata/_edit_lock_ = true
 
-[connection signal="mouse_entered" from="Camera2D/Area2D" to="Camera2D" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Camera2D/Area2D" to="Camera2D" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Camera2D/Area2D2" to="Camera2D" method="_on_area_2d_2_mouse_entered_negative"]
-[connection signal="mouse_exited" from="Camera2D/Area2D2" to="Camera2D" method="_on_area_2d_2_mouse_exited_negative"]
+[node name="Vending Machine" type="Node2D" parent="."]
+
+[node name="Vending Machine Base Texture" type="Sprite2D" parent="Vending Machine"]
+texture = ExtResource("5_b66he")
+
+[node name="Test Puzzle" type="Node2D" parent="Vending Machine"]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vending Machine/Test Puzzle"]
+sprite_frames = SubResource("SpriteFrames_f31y5")
+animation = &"123"
+
+[node name="Button" type="Button" parent="Vending Machine/Test Puzzle"]
+offset_left = 25.0
+offset_top = -10.5
+offset_right = 33.0
+offset_bottom = -2.5
+theme_type_variation = &"FlatButton"
+
+[connection signal="mouse_entered" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Lower Cam Collision" to="Camera2D" method="_on_area_2d_2_mouse_entered_negative"]
+[connection signal="mouse_exited" from="Camera2D/Lower Cam Collision" to="Camera2D" method="_on_area_2d_2_mouse_exited_negative"]

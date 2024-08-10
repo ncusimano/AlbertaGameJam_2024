@@ -19,19 +19,16 @@ func _process(delta):
 
 func _on_area_2d_mouse_entered():
 	movevalue = -1
-	print(movevalue)
-
+	
 
 func _on_area_2d_mouse_exited():
 	movevalue = 0
-	print(movevalue)
+	
 
 
 func _on_area_2d_2_mouse_entered_negative():
 	movevalue = 1
-	print(movevalue) # Replace with function body.
 
 
 func _on_area_2d_2_mouse_exited_negative():
 	movevalue = 0
-	print(movevalue) # Replace with function body.

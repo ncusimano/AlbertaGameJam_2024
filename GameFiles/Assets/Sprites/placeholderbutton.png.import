@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ghndqyu2fmwh"
-path="res://.godot/imported/Vending Machine.png-66baa2f342d442936afe96a7a9ebb1da.ctex"
+uid="uid://2a15j7xyg3is"
+path="res://.godot/imported/placeholderbutton.png-60c21a29308de6b64d51c07d32c38a85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vending Machine.png"
-dest_files=["res://.godot/imported/Vending Machine.png-66baa2f342d442936afe96a7a9ebb1da.ctex"]
+source_file="res://Assets/Sprites/placeholderbutton.png"
+dest_files=["res://.godot/imported/placeholderbutton.png-60c21a29308de6b64d51c07d32c38a85.ctex"]
 
 [params]
 
