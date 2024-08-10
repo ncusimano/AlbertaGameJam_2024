@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1wlsoy53i0fg"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/Maincam.gd" id="1_65psk"]
+[ext_resource type="Texture2D" uid="uid://ghndqyu2fmwh" path="res://Assets/Vending Machine.png" id="1_marg0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
+size = Vector2(150, 20)
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 32.75)
+zoom = Vector2(9.6, 9.6)
+editor_draw_limits = true
+script = ExtResource("1_65psk")
+
+[node name="Area2D" type="Area2D" parent="Camera2D"]
+position = Vector2(0, -47)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
+shape = SubResource("RectangleShape2D_ulrms")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D"]
+visible = false
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("1_marg0")
+
+[node name="Area2D2" type="Area2D" parent="Camera2D"]
+position = Vector2(0, 46)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D2"]
+shape = SubResource("RectangleShape2D_ulrms")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D2"]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_marg0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_marg0")
+
+[connection signal="mouse_entered" from="Camera2D/Area2D" to="Camera2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Area2D" to="Camera2D" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Area2D2" to="Camera2D" method="_on_area_2d_2_mouse_entered_negative"]
+[connection signal="mouse_exited" from="Camera2D/Area2D2" to="Camera2D" method="_on_area_2d_2_mouse_exited_negative"]
