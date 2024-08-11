@@ -78,7 +78,6 @@ func detect_sequence(kypd_pressed, button_num):
 	# Prompt the user by flashing the correct key on the next pad.
 	if (not is_solved):
 		var button_to_light = get_node(next_kypd).get_button(soln_sequence[next_button_index])
-		print(button_to_light)
 		flash_button(button_to_light)
 
 

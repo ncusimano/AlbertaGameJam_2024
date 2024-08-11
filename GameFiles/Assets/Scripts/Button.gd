@@ -33,6 +33,7 @@ func set_sprite_rel(offset_x, offset_y):
 	# Adjusts the position of the window in the spritesheet relative to previous position.
 	sprite.region_rect.position.x += offset_x
 	sprite.region_rect.position.y += offset_y
+	
 
 func _pressed():
 	custom_button_pressed.emit(button_num)

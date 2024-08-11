@@ -13,6 +13,51 @@ var DigitMap = {
 	"0": Vector2(0, 21),
 	}
 
+var input_digits = [0, 0, 0]
+
+# 2.37 + 1.26 = 3.63
+var answer = [3, 6, 3]
+
+var input_count = 0
+
+var is_solved = false
+
+func _ready():
+	var num_pad = get_node("/root/Game/BlinkytoPriceis/Numpad")
+	num_pad.kypd_button_pressed.connect(_on_numpad_press)
+
+
+func _on_numpad_press(button_num):
+	# Puzzle only allows interaction when unsolved.
+	if(not is_solved and button_num != null):
+		input_digits.pop_front()
+		input_digits.append(button_num + 1)
+
+		input_count += 1
+
+		# Set the display digits.
+		setdigit(0, input_digits[0])
+		setdigit(1, input_digits[1])
+		setdigit(2, input_digits[2])
+
+		if (input_count == 3):
+			if (input_digits == answer):
+				print("Solved!")
+				is_solved = true
+				input_count = 0
+
+				# Play win sound here! -------------------------------------
+			else:
+				print("Incorrect")
+				await get_tree().create_timer(1.0).timeout
+				input_digits = [0, 0, 0]
+				input_count = 0
+
+				# Reset the display digits.
+				setdigit(0, input_digits[0])
+				setdigit(1, input_digits[1])
+				setdigit(2, input_digits[2])
+
 # Use this to set the text for the three digits, "DigitIndex"(0-2) sets what digit of the three you are targeting, "Number"(0-9) is the number you want it to display
 func setdigit(DigitIndex, Number):
 	var TargetDigit = null
