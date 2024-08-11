@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://86sclwqs7mho"]
+[gd_scene load_steps=4 format=3 uid="uid://cy4km34fi1fe6"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/mozart.gd" id="1_mln8o"]
-[ext_resource type="Texture2D" uid="uid://c1dh1djl123wp" path="res://Assets/Sprites/MozartKeyPress.png" id="1_qq2pf"]
-[ext_resource type="PackedScene" uid="uid://dqkrcka0y7bgq" path="res://Assets/Scenes/Mzrt_button.tscn" id="3_y38fl"]
+[ext_resource type="Texture2D" path="res://Assets/Sprites/MozartKeyPress.png" id="1_qq2pf"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/Mzrt_button.tscn" id="3_y38fl"]
 
 [node name="Mozart" type="Node2D"]
 script = ExtResource("1_mln8o")
@@ -95,6 +95,9 @@ offset_top = 7.0
 offset_right = 14.0
 offset_bottom = 12.0
 button_num = 1
+
+[node name="MozartAudio" type="AudioStreamPlayer2D" parent="."]
+volume_db = 5.333
 
 [connection signal="custom_button_pressed" from="Button" to="." method="_on_button_custom_button_pressed"]
 [connection signal="custom_button_pressed" from="Button2" to="." method="_on_button_custom_button_pressed"]

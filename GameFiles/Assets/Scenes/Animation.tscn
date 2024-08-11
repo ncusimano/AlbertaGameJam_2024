@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ofmr1ro5xl1f" path="res://Assets/Scenes/blinky.tscn" id="18_70sqp"]
 [ext_resource type="PackedScene" path="res://Assets/Scenes/3x3_numpad.tscn" id="18_s5efe"]
 [ext_resource type="PackedScene" uid="uid://k5qmt2y6de7k" path="res://Assets/Scenes/transition_to_mozart.tscn" id="19_bertb"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/mozart.tscn" id="19_c26b1"]
+[ext_resource type="PackedScene" uid="uid://cy4km34fi1fe6" path="res://Assets/Scenes/mozart.tscn" id="19_c26b1"]
 [ext_resource type="Texture2D" uid="uid://ci1turygt840" path="res://Assets/Sprites/PriceistoMozart.png" id="20_q3p8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
