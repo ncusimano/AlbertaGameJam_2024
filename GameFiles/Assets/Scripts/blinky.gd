@@ -4,6 +4,8 @@ extends Node2D
 var next_button_index = 0
 var next_kypd = ""
 var detecting = false
+@export var prompt_time = 0.5 # in seconds
+
 
 var soln_sequence
 var sequence_length = 3
@@ -24,14 +26,10 @@ func _ready():
 	# Make the solution sequence.
 	reset_sequence()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# func _process(delta):
-	# pass
-
 
 func _numpad_pressed(button_num):
-	next_kypd = "Letterpad"
-	detect_sequence("Numpad", button_num)
+	if (not is_solved):
+		detect_sequence("Numpad", button_num)
 
 
 # func _numpad_released(time_pressed):
@@ -39,8 +37,8 @@ func _numpad_pressed(button_num):
 
 
 func _letterpad_pressed(button_num):
-	next_kypd = "Numpad"
-	detect_sequence("Letterpad", button_num)
+	if (not is_solved):
+		detect_sequence("Letterpad", button_num)
 
 
 # func _letterpad_released(time_pressed):
@@ -52,10 +50,11 @@ func detect_sequence(kypd_pressed, button_num):
 	if (not detecting):
 		# Listen for the sequence after the first button press.
 		detecting = true
+
 		print("Listening for solution sequence.")
 	elif (kypd_pressed == next_kypd && button_num == soln_sequence[next_button_index]):
 		# Correct button press.
-		if (next_button_index != len(soln_sequence - 1)):
+		if (next_button_index != len(soln_sequence) - 1):
 			next_button_index += 1
 
 			print("Correct, press next button in pattern.")
@@ -70,8 +69,15 @@ func detect_sequence(kypd_pressed, button_num):
 		reset_sequence()
 		print("Incorrect sequence, resetting.")
 
+	# Set which keypad should be next.
+	if (kypd_pressed == "Numpad"):
+		next_kypd = "Letterpad"
+	else:
+		next_kypd = "Numpad"
+
 	# Prompt the user by flashing the correct key on the next pad.
 	var button_to_light = get_node(next_kypd).get_button(soln_sequence[next_button_index])
+	print(button_to_light)
 	flash_button(button_to_light)
 
 
@@ -89,6 +95,6 @@ func flash_button(flashed_button):
 	# await suspends this function until the timer runs out, but allows the code
 	# that called the function to continue running in the meantime. This means you can still
 	# press buttons even while the prompt is flashing.
-	flashed_button.set_pressed(true)
-	await get_tree().create_timer(0.5).timeout
-	flashed_button.set_pressed(false)
+	flashed_button.set_sprite_rel(-21, 0)
+	await get_tree().create_timer(prompt_time).timeout
+	flashed_button.set_sprite_rel(21, 0)

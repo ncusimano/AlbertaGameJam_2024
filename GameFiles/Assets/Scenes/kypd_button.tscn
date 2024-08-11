@@ -24,6 +24,8 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_t3v3q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m8fco")
 flat = true
 script = ExtResource("1_852kp")
+button_num = null
+sprite_position = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_thmk0")

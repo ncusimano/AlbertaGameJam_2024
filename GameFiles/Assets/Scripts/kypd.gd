@@ -17,7 +17,6 @@ func _ready():
 	# Connect button signals for each button.
 	for child in (get_children()):
 		if (child != get_node("Timer")):
-			print("Hey")
 			child.custom_button_pressed.connect(_on_button_pressed)
 			child.custom_button_released.connect(_on_button_released)
 
@@ -41,12 +40,14 @@ func _on_button_released(number):
 		print("Button is null")
 	elif (number == current_button):
 		timer.stop()
-		print("Button " + str(current_button) + ": " + str(time_pressed))
-		current_button = null
 
 		# Calculate the total time the timer has been running for.
 		time_pressed = timer_cycles * timer.wait_time + (timer.wait_time - timer.time_left)
+		print("Button " + str(current_button) + ": " + str(float(time_pressed)))
 
+		# Set no button as pressed.
+		current_button = null
+		
 		# Send the button released signal
 		kypd_button_released.emit(time_pressed)
 
