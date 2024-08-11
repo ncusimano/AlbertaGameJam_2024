@@ -6,7 +6,6 @@ const SPRITE_POS_INIT_VALUE = Vector2(21, 0)
 @export var sprite_position: Vector2 = SPRITE_POS_INIT_VALUE
 
 const SPRITE_SHEET_INIT_VALUE = "res://Assets/Sprites/Blinky Buttons.png"
-@export var sprite_resource = SPRITE_SHEET_INIT_VALUE
  
 var sprite
 
@@ -16,7 +15,7 @@ signal custom_button_released(number)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite = get_node("Sprite2D")
-	sprite.texture = load(sprite_resource)
+	sprite.texture = preload(SPRITE_SHEET_INIT_VALUE)
 	sprite.region_rect.position = sprite_position
 
 	

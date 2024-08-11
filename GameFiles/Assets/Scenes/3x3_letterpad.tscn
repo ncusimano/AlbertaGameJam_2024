@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/kypd.gd" id="1_37dch"]
 [ext_resource type="PackedScene" uid="uid://d266qq0odkwso" path="res://Assets/Scenes/kypd_button.tscn" id="2_irc0e"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Letterpad" type="Node2D"]
 script = ExtResource("1_37dch")
 
 [node name="button0" parent="." instance=ExtResource("2_irc0e")]
