@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=3 uid="uid://bcxtprrypifa8"]
+
+[ext_resource type="Texture2D" path="res://Assets/Sprites/MozartKeyPress.png" id="1_f4x1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ompf2"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(0, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux2so"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(150, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paw8a"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(300, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pur5"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(450, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o81kj"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(600, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kr88"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(750, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1is5i"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(900, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob18o"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1050, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xexpp"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1200, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03ewe"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1350, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwpgn"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1500, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkwtq"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1650, 0, 150, 179)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sxwc"]
+atlas = ExtResource("1_f4x1l")
+region = Rect2(1800, 0, 150, 179)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1nyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ompf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux2so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paw8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pur5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o81kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kr88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1is5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob18o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xexpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03ewe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwpgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkwtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sxwc")
+}],
+"loop": true,
+"name": &"Piano",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlewh"]
+size = Vector2(20, 4.46875)
+
+[node name="MozartTest" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 3)
+sprite_frames = SubResource("SpriteFrames_r1nyy")
+animation = &"Piano"
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+position = Vector2(-2, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(31, -7.76563)
+shape = SubResource("RectangleShape2D_mlewh")
