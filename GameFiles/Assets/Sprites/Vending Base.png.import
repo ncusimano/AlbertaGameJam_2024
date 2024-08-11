@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctthrny22fru8"
-path="res://.godot/imported/Vending Base1.png-7bfdfc2c3680ac81966771a28d2ff6db.ctex"
+uid="uid://c4eqbsno14mnp"
+path="res://.godot/imported/Vending Base.png-1281ebd802d1b159de2c1c5297b71546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Vending Base1.png"
-dest_files=["res://.godot/imported/Vending Base1.png-7bfdfc2c3680ac81966771a28d2ff6db.ctex"]
+source_file="res://Assets/Sprites/Vending Base.png"
+dest_files=["res://.godot/imported/Vending Base.png-1281ebd802d1b159de2c1c5297b71546.ctex"]
 
 [params]
 

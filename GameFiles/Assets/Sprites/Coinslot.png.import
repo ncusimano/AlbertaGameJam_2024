@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8yb68lithhf1"
-path="res://.godot/imported/Vending Machine-1.png-0b564079a71cc5c711320756e36a058c.ctex"
+uid="uid://q8ea5lpy25xp"
+path="res://.godot/imported/Coinslot.png-84ff7361aca782ca873f107f74c76264.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Vending Machine-1.png"
-dest_files=["res://.godot/imported/Vending Machine-1.png-0b564079a71cc5c711320756e36a058c.ctex"]
+source_file="res://Assets/Sprites/Coinslot.png"
+dest_files=["res://.godot/imported/Coinslot.png-84ff7361aca782ca873f107f74c76264.ctex"]
 
 [params]
 
