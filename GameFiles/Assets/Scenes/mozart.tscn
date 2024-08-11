@@ -1,0 +1,110 @@
+[gd_scene load_steps=4 format=3 uid="uid://86sclwqs7mho"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/mozart.gd" id="1_mln8o"]
+[ext_resource type="Texture2D" uid="uid://c1dh1djl123wp" path="res://Assets/Sprites/MozartKeyPress.png" id="1_qq2pf"]
+[ext_resource type="PackedScene" uid="uid://dqkrcka0y7bgq" path="res://Assets/Scenes/Mzrt_button.tscn" id="3_y38fl"]
+
+[node name="Mozart" type="Node2D"]
+script = ExtResource("1_mln8o")
+
+[node name="MozartSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_qq2pf")
+centered = false
+region_enabled = true
+region_rect = Rect2(93, 72, 22, 54)
+
+[node name="Button" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 21.0
+offset_bottom = 9.0
+
+[node name="Button2" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 21.0
+offset_bottom = 16.0
+button_num = 2
+
+[node name="Button3" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 21.0
+offset_bottom = 23.0
+button_num = 4
+
+[node name="Button4" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 21.0
+offset_bottom = 30.0
+button_num = 6
+
+[node name="Button5" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 31.0
+offset_right = 21.0
+offset_bottom = 37.0
+button_num = 7
+
+[node name="Button6" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 38.0
+offset_right = 21.0
+offset_bottom = 44.0
+button_num = 9
+
+[node name="Button7" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 45.0
+offset_right = 21.0
+offset_bottom = 51.0
+button_num = 11
+
+[node name="Button8" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 14.0
+offset_bottom = 47.0
+button_num = 10
+
+[node name="Button9" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 35.0
+offset_right = 14.0
+offset_bottom = 40.0
+button_num = 8
+
+[node name="Button10" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 21.0
+offset_right = 14.0
+offset_bottom = 26.0
+button_num = 5
+
+[node name="Button11" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 14.0
+offset_bottom = 19.0
+button_num = 3
+
+[node name="Button12" parent="." instance=ExtResource("3_y38fl")]
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 14.0
+offset_bottom = 12.0
+button_num = 1
+
+[connection signal="custom_button_pressed" from="Button" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button2" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button3" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button4" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button5" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button6" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button7" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button8" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button9" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button10" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button11" to="." method="_on_button_custom_button_pressed"]
+[connection signal="custom_button_pressed" from="Button12" to="." method="_on_button_custom_button_pressed"]
