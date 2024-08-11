@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://nmbhuk1x27uu"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/kypd.gd" id="1_37dch"]
+[ext_resource type="PackedScene" uid="uid://d266qq0odkwso" path="res://Assets/Scenes/kypd_button.tscn" id="2_irc0e"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_37dch")
+
+[node name="button1" parent="." instance=ExtResource("2_irc0e")]
+sprite_position = Vector2(21, 25)
+
+[node name="button2" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 7.0
+offset_right = 13.0
+button_num = 1
+sprite_position = Vector2(28, 25)
+
+[node name="button3" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 14.0
+offset_right = 20.0
+button_num = 2
+sprite_position = Vector2(35, 25)
+
+[node name="button4" parent="." instance=ExtResource("2_irc0e")]
+offset_top = 7.0
+offset_bottom = 13.0
+button_num = 3
+sprite_position = Vector2(21, 32)
+
+[node name="button5" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 13.0
+offset_bottom = 13.0
+button_num = 4
+sprite_position = Vector2(28, 32)
+
+[node name="button6" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 20.0
+offset_bottom = 13.0
+button_num = 5
+sprite_position = Vector2(35, 32)
+
+[node name="button7" parent="." instance=ExtResource("2_irc0e")]
+offset_top = 14.0
+offset_bottom = 20.0
+button_num = 6
+sprite_position = Vector2(21, 39)
+
+[node name="button8" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 13.0
+offset_bottom = 20.0
+button_num = 7
+sprite_position = Vector2(28, 39)
+
+[node name="button9" parent="." instance=ExtResource("2_irc0e")]
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 20.0
+offset_bottom = 20.0
+button_num = 8
+sprite_position = Vector2(35, 39)
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcyheg4jjhfj5"]
+[gd_scene load_steps=3 format=3 uid="uid://dcyheg4jjhfj5"]
 
 [ext_resource type="PackedScene" uid="uid://cgohg8t2182tr" path="res://Assets/Scenes/3x3_letterpad.tscn" id="1_mu7tl"]
+[ext_resource type="PackedScene" uid="uid://nmbhuk1x27uu" path="res://Assets/Scenes/3x3_numpad.tscn" id="2_mr6ae"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Numpad" parent="." instance=ExtResource("1_mu7tl")]
-
 [node name="Letterpad" parent="." instance=ExtResource("1_mu7tl")]
-position = Vector2(0, 24)
+
+[node name="Numpad" parent="." instance=ExtResource("2_mr6ae")]
+position = Vector2(0, 27)
