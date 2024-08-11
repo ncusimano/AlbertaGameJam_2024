@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1wlsoy53i0fg"]
+[gd_scene load_steps=15 format=3 uid="uid://c1wlsoy53i0fg"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="1_65psk"]
 [ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_i8vgr"]
@@ -46,6 +46,8 @@ animations = [{
 "name": &"123",
 "speed": 5.0
 }]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkot8"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_i8vgr")
@@ -101,6 +103,13 @@ animation = &"123"
 
 [node name="Node2D" parent="Vending Machine/Test Puzzle" instance=ExtResource("7_lrxiq")]
 position = Vector2(19, -17)
+
+[node name="MozartTest" type="Node2D" parent="Vending Machine"]
+
+[node name="Node2D" type="Node2D" parent="Vending Machine/MozartTest"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vending Machine/MozartTest"]
+sprite_frames = SubResource("SpriteFrames_gkot8")
 
 [connection signal="mouse_entered" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_exited"]
