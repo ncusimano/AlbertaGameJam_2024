@@ -12,6 +12,7 @@ signal custom_button_released(number)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite = $Sprite2D
+	sprite.region_rect.position = Vector2(sprite_offset_x, sprite_offset_y)
 	sprite.texture = load(sprite_resource)
 	set_action_mode(ACTION_MODE_BUTTON_PRESS)
 	button_up.connect(_released)
