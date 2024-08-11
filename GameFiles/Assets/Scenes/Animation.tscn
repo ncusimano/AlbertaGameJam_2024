@@ -1,21 +1,21 @@
 [gd_scene load_steps=55 format=3 uid="uid://c1wlsoy53i0fg"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="1_65psk"]
-[ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_i8vgr"]
-[ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="4_aki0s"]
-[ext_resource type="Texture2D" uid="uid://dftt0hhqvbvsw" path="res://Assets/Sprites/Vending Slots.png" id="5_c1upk"]
-[ext_resource type="Texture2D" uid="uid://ccgq3qbu0t3mr" path="res://Assets/Sprites/Foods.png" id="6_eq7xg"]
-[ext_resource type="Texture2D" uid="uid://cuxi1u0fi2qii" path="res://Assets/Sprites/Coils.png" id="7_w2a00"]
-[ext_resource type="Texture2D" uid="uid://xx2f7kf71ygk" path="res://Assets/Sprites/TextDisplay.png" id="8_kohee"]
-[ext_resource type="Texture2D" uid="uid://7rnj4f1lxecw" path="res://Assets/Sprites/Vending Output.png" id="9_sqwmp"]
-[ext_resource type="Texture2D" uid="uid://b7q15qarb1iab" path="res://Assets/Sprites/BlinkyBG.png" id="10_c3qsj"]
-[ext_resource type="Texture2D" uid="uid://c4eqbsno14mnp" path="res://Assets/Sprites/Vending Base.png" id="11_dikx7"]
-[ext_resource type="Texture2D" uid="uid://q8ea5lpy25xp" path="res://Assets/Sprites/Coinslot.png" id="11_gorna"]
-[ext_resource type="PackedScene" uid="uid://bgq76y8hqa1bx" path="res://Assets/Scenes/Prefabs/priceis_text.tscn" id="13_upo8e"]
-[ext_resource type="Texture2D" uid="uid://bfb3pm4qd4bmn" path="res://Assets/Sprites/PriceisPanelOpen.png" id="14_746am"]
-[ext_resource type="Texture2D" uid="uid://bolf045vtvcid" path="res://Assets/Sprites/BlinkyLetterPanelTransitiontoPriceis.png" id="14_mhhdb"]
-[ext_resource type="Script" path="res://Assets/Scripts/PriceisDisplay.gd" id="15_om5eq"]
-[ext_resource type="Texture2D" uid="uid://5qcxigr486c0" path="res://Assets/Sprites/PricetagSwap.png" id="16_u6nyx"]
+[ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_mt46x"]
+[ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="2_l08fw"]
+[ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="3_dkdph"]
+[ext_resource type="Texture2D" uid="uid://dftt0hhqvbvsw" path="res://Assets/Sprites/Vending Slots.png" id="4_k68dr"]
+[ext_resource type="Texture2D" uid="uid://ccgq3qbu0t3mr" path="res://Assets/Sprites/Foods.png" id="5_i2hhc"]
+[ext_resource type="Texture2D" uid="uid://cuxi1u0fi2qii" path="res://Assets/Sprites/Coils.png" id="6_2hg4x"]
+[ext_resource type="Texture2D" uid="uid://b7q15qarb1iab" path="res://Assets/Sprites/BlinkyBG.png" id="7_8n2y6"]
+[ext_resource type="Texture2D" uid="uid://xx2f7kf71ygk" path="res://Assets/Sprites/TextDisplay.png" id="8_25rtb"]
+[ext_resource type="Texture2D" uid="uid://7rnj4f1lxecw" path="res://Assets/Sprites/Vending Output.png" id="9_orixa"]
+[ext_resource type="Texture2D" uid="uid://c4eqbsno14mnp" path="res://Assets/Sprites/Vending Base.png" id="10_6bl64"]
+[ext_resource type="Texture2D" uid="uid://q8ea5lpy25xp" path="res://Assets/Sprites/Coinslot.png" id="11_5j55u"]
+[ext_resource type="PackedScene" uid="uid://bgq76y8hqa1bx" path="res://Assets/Scenes/Prefabs/priceis_text.tscn" id="12_t0exp"]
+[ext_resource type="Texture2D" uid="uid://bolf045vtvcid" path="res://Assets/Sprites/BlinkyLetterPanelTransitiontoPriceis.png" id="13_pn3g8"]
+[ext_resource type="Script" path="res://Assets/Scripts/PriceisDisplay.gd" id="14_dfa72"]
+[ext_resource type="Texture2D" uid="uid://bfb3pm4qd4bmn" path="res://Assets/Sprites/PriceisPanelOpen.png" id="15_cyv5o"]
+[ext_resource type="Texture2D" uid="uid://5qcxigr486c0" path="res://Assets/Sprites/PricetagSwap.png" id="16_h5v62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
 size = Vector2(150, 20)
@@ -90,51 +90,51 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0ksm"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(176, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjxtl"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(198, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37s2g"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(0, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbm2r"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(22, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0omux"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(44, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhn5d"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(66, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fflm"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(88, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18a76"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(110, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ctv53"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(132, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7xla"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(154, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_annmf"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(176, 0, 22, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfjnu"]
-atlas = ExtResource("14_mhhdb")
+atlas = ExtResource("13_pn3g8")
 region = Rect2(198, 0, 22, 23)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hschy"]
@@ -192,51 +192,51 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hnsy2"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(0, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3l6k"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(22, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ai2jl"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(44, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtevk"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(66, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiani"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(88, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkqc5"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(110, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgnc1"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(132, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_edxcq"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(154, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ciyg"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(176, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s40nt"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(198, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l0ack"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(220, 0, 22, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmsyk"]
-atlas = ExtResource("14_746am")
+atlas = ExtResource("15_cyv5o")
 region = Rect2(242, 0, 22, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnjdn"]
@@ -284,35 +284,35 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8loe6"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(0, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vca4m"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(66, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jd8t6"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(132, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gpw8"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(198, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_670vd"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(264, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tc0un"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(330, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjyex"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(396, 0, 66, 62)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcven"]
-atlas = ExtResource("16_u6nyx")
+atlas = ExtResource("16_h5v62")
 region = Rect2(462, 0, 66, 62)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nny7d"]
@@ -348,12 +348,12 @@ animations = [{
 }]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_i8vgr")
+script = ExtResource("1_mt46x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(9.6, 9.6)
 editor_draw_limits = true
-script = ExtResource("1_65psk")
+script = ExtResource("2_l08fw")
 metadata/_edit_lock_ = true
 
 [node name="Upper Cam Collision" type="Area2D" parent="Camera2D"]
@@ -371,47 +371,47 @@ shape = SubResource("RectangleShape2D_ulrms")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -5
-texture = ExtResource("4_aki0s")
+texture = ExtResource("3_dkdph")
 metadata/_edit_lock_ = true
 
 [node name="Vending Machine" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("5_c1upk")
+texture = ExtResource("4_k68dr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("5_c1upk")
+texture = ExtResource("4_k68dr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("6_eq7xg")
+texture = ExtResource("5_i2hhc")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("7_w2a00")
+texture = ExtResource("6_2hg4x")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("10_c3qsj")
+texture = ExtResource("7_8n2y6")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("8_kohee")
+texture = ExtResource("8_25rtb")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Vending Machine"]
 z_index = 1
-texture = ExtResource("9_sqwmp")
+texture = ExtResource("9_orixa")
 
 [node name="Vending Machine Base Texture" type="Sprite2D" parent="Vending Machine"]
-texture = ExtResource("11_dikx7")
+texture = ExtResource("10_6bl64")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Vending Machine"]
 z_index = 4
-texture = ExtResource("11_gorna")
+texture = ExtResource("11_5j55u")
 
-[node name="Text Container" parent="." instance=ExtResource("13_upo8e")]
+[node name="Text Container" parent="." instance=ExtResource("12_t0exp")]
 visible = false
 z_index = 4
 position = Vector2(19, -30.5)
@@ -430,7 +430,7 @@ position = Vector2(29, -6)
 sprite_frames = SubResource("SpriteFrames_hschy")
 animation = &"Open"
 frame = 1
-script = ExtResource("15_om5eq")
+script = ExtResource("14_dfa72")
 
 [node name="PriceisTextDisplayBg" type="AnimatedSprite2D" parent="BlinkytoPriceis"]
 z_index = 3
