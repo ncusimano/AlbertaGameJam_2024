@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7mdb7i3n0g6l"]
+[gd_scene load_steps=4 format=3 uid="uid://b7mdb7i3n0g6l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdnwf"]
+[ext_resource type="Script" path="res://Assets/Scripts/button.gd" id="1_vehyq"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8fco"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[sub_resource type="SpriteFrames" id="SpriteFrames_a46op"]
+animations = []
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_type_variation = &"FlatButton"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m8fco")
+script = ExtResource("1_vehyq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_vdnwf")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a46op")
+animation = &""
