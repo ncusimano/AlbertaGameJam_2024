@@ -2,7 +2,7 @@ extends Button
 
 @export var button_num = 0
 @export var sprite_resource = "res://Assets/Sprites/Blinky Buttons.png"
-@export var sprite_position = Vector2(0, 0)
+@export var sprite_position = Vector2(21, 0)
 var sprite
 
 signal custom_button_pressed(number)

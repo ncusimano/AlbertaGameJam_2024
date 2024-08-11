@@ -1,5 +1,5 @@
 extends Node2D
-
+# This script contains the logic for the puzzle Blinky.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

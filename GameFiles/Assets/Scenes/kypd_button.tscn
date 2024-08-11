@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://d266qq0odkwso"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/button.gd" id="1_vehyq"]
+[ext_resource type="Script" path="res://Assets/Scripts/Button.gd" id="1_852kp"]
 [ext_resource type="Texture2D" uid="uid://lf185t8rj6n" path="res://Assets/Sprites/Blinky Buttons.png" id="2_thmk0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdvxp"]
@@ -23,10 +23,10 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_hctxi")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_t3v3q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m8fco")
 flat = true
-script = ExtResource("1_vehyq")
+script = ExtResource("1_852kp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_thmk0")
 centered = false
 region_enabled = true
-region_rect = Rect2(21, 0, 6, 6)
+region_rect = Rect2(0, 0, 6, 6)
