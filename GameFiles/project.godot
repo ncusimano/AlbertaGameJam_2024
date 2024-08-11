@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="ItCameFromMidtownMall"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Assets/Scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -21,5 +27,6 @@ project/assembly_name="ItCameFromMidtownMall"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

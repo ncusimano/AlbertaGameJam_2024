@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1wlsoy53i0fg"]
+[gd_scene load_steps=14 format=3 uid="uid://c1wlsoy53i0fg"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="1_65psk"]
 [ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_i8vgr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="4_aki0s"]
 [ext_resource type="Texture2D" uid="uid://ctthrny22fru8" path="res://Assets/Sprites/Vending Base1.png" id="5_b66he"]
 [ext_resource type="Texture2D" uid="uid://2a15j7xyg3is" path="res://Assets/Sprites/placeholderbutton.png" id="6_3gegj"]
+[ext_resource type="PackedScene" uid="uid://cgohg8t2182tr" path="res://Assets/Scenes/3x3_kypd.tscn" id="7_lrxiq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
 size = Vector2(150, 20)
@@ -93,15 +94,13 @@ texture = ExtResource("5_b66he")
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vending Machine/Test Puzzle"]
+light_mask = 2
+visibility_layer = 2
 sprite_frames = SubResource("SpriteFrames_f31y5")
 animation = &"123"
 
-[node name="Button" type="Button" parent="Vending Machine/Test Puzzle"]
-offset_left = 25.0
-offset_top = -10.5
-offset_right = 33.0
-offset_bottom = -2.5
-theme_type_variation = &"FlatButton"
+[node name="Node2D" parent="Vending Machine/Test Puzzle" instance=ExtResource("7_lrxiq")]
+position = Vector2(19, -17)
 
 [connection signal="mouse_entered" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_exited"]
