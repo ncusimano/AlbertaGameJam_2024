@@ -21,6 +21,8 @@ var answer = [3, 6, 3]
 var input_count = 0
 
 var is_solved = false
+signal solved()
+var victory_jingle = preload("res://Assets/Sounds/jingleFinal.mp3")
 
 func _ready():
 	var num_pad = get_node("/root/Game/BlinkytoPriceis/Numpad")
@@ -47,6 +49,12 @@ func _on_numpad_press(button_num):
 				input_count = 0
 
 				# Play win sound here! -------------------------------------
+				var audio_player = get_node("AudioStreamPlayer2D")
+				audio_player.set_stream(victory_jingle)
+				audio_player.play()
+
+				solved.emit()
+
 			else:
 				print("Incorrect")
 				await get_tree().create_timer(1.0).timeout

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://d3aytxnw8j5d7"]
+[gd_scene load_steps=57 format=3 uid="uid://d3aytxnw8j5d7"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_mt46x"]
 [ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="2_l08fw"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/PriceisDisplay.gd" id="14_dfa72"]
 [ext_resource type="Texture2D" uid="uid://bfb3pm4qd4bmn" path="res://Assets/Sprites/PriceisPanelOpen.png" id="15_cyv5o"]
 [ext_resource type="Texture2D" uid="uid://5qcxigr486c0" path="res://Assets/Sprites/PricetagSwap.png" id="16_h5v62"]
+[ext_resource type="PackedScene" uid="uid://dcyheg4jjhfj5" path="res://Assets/Scenes/blinky.tscn" id="18_70sqp"]
 [ext_resource type="PackedScene" uid="uid://nmbhuk1x27uu" path="res://Assets/Scenes/3x3_numpad.tscn" id="18_s5efe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
@@ -63,7 +64,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Text Container:visible")
+tracks/3/path = NodePath("../PriceIs:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -412,9 +413,11 @@ texture = ExtResource("10_6bl64")
 z_index = 4
 texture = ExtResource("11_5j55u")
 
-[node name="Text Container" parent="." instance=ExtResource("12_t0exp")]
+[node name="PriceIs" parent="." instance=ExtResource("12_t0exp")]
 z_index = 4
 position = Vector2(19, -30.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PriceIs"]
 
 [node name="BlinkytoPriceis" type="Node2D" parent="."]
 
@@ -447,6 +450,10 @@ frame = 7
 [node name="Numpad" parent="BlinkytoPriceis" instance=ExtResource("18_s5efe")]
 z_index = 1
 position = Vector2(19, 9)
+
+[node name="Blinky" parent="." instance=ExtResource("18_70sqp")]
+z_index = 1
+position = Vector2(19, -16)
 
 [connection signal="mouse_entered" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_exited"]

@@ -13,6 +13,8 @@ var sequence_length = 3
 var rng = RandomNumberGenerator.new()
 
 var is_solved = false
+signal solved()
+var victory_jingle = preload("res://Assets/Sounds/jingleFinal.mp3")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -62,9 +64,14 @@ func detect_sequence(kypd_pressed, button_num):
 			# If the end of the sequence is reached, the puzzle is solved.
 			is_solved = true
 			print("Solved!")
+
 			# Play solved jingle here! -----------------------------
+			var audio_player = get_node("AudioStreamPlayer2D")
+			audio_player.set_stream(victory_jingle)
+			audio_player.play()
 
 			# Transition to next puzzle in the main game controller.
+			solved.emit()
 	else:
 		reset_sequence()
 		print("Incorrect sequence, resetting.")
