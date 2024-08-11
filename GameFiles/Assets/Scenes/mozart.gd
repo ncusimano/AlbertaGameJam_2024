@@ -4,7 +4,7 @@ var MozartSprites = [
 	Vector2(93, 72)
 ]
 
-var MozartSol = [1, 2, 4]
+var MozartSol = [11, 7, 11, 4]
 var MozartInputs = []
 var SucessCounter = 0
 
@@ -29,7 +29,7 @@ func _on_button_custom_button_pressed(number):
 		if MozartInputs[i] == MozartSol[i]:
 			print("input " + str(i) + " success")
 			SucessCounter += 1
-			if SucessCounter == 6:
+			if SucessCounter == 10:
 				print("you won!")
 				break
 		else:
