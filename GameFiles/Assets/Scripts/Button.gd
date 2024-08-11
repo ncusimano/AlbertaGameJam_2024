@@ -1,24 +1,27 @@
 extends Button
 
 @export var button_num = 0
-@export var animation = ""
+@export var sprite_resource = "res://Assets/Sprites/Blinky Buttons.png"
+var sprite
 
 signal custom_button_pressed(number)
 signal custom_button_released(number)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$AnimatedSprite2D.set_animation(animation)
+	sprite = $Sprite2D
+	sprite.texture = load(sprite_resource)
 	set_action_mode(ACTION_MODE_BUTTON_PRESS)
+	button_up.connect(_released)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# func _process(delta):
-	# pass
-
+func set_sprite(offset_x, offset_y):
+	sprite.offset = Vector2(offset_x, offset_y)
 
 func _pressed():
 	custom_button_pressed.emit(button_num)
-	# Play the pressing animation.
-	#$AnimatedSprite2D.play()
+	sprite.region_rect.position.x -= 21
+
+func _released():
+	custom_button_released.emit(button_num)
+	sprite.region_rect.position.x += 21
 

@@ -1,19 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7mdb7i3n0g6l"]
+[gd_scene load_steps=8 format=3 uid="uid://d266qq0odkwso"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/button.gd" id="1_vehyq"]
+[ext_resource type="Texture2D" uid="uid://lf185t8rj6n" path="res://Assets/Sprites/Blinky Buttons.png" id="2_thmk0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdvxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smak7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hctxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3v3q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8fco"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_a46op"]
-animations = []
-
 [node name="Button" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 6.0
+offset_bottom = 6.0
 theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rdvxp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_smak7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hctxi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t3v3q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m8fco")
+flat = true
 script = ExtResource("1_vehyq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_a46op")
-animation = &""
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_thmk0")
+centered = false
+region_enabled = true
+region_rect = Rect2(21, 0, 6, 6)

@@ -11,11 +11,13 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	timer.set_one_shot(false)
 
+	print("Button ready")
+	
 	# Connect button signals for each button.
 	for child in (get_children()):
 		if (has_signal("custom_button_pressed")):
 			child.custom_button_pressed.connect(_on_button_pressed)
-			child.button_up.connect(_on_button_released)
+			child.custom_button_released.connect(_on_button_released)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,9 +32,14 @@ func _on_button_pressed(number):
 	time_pressed = 0
 	timer.start()
 
-func _on_button_released():
-	timer.stop()
-	current_button = null
+
+func _on_button_released(number):
+	print("hey sup.")
+	if (number == current_button):
+		timer.stop()
+		current_button = null
+		print("Button " + current_button + ": " + time_pressed)
+
 
 func _on_timer_timeout():
 	timer_cycles += 1
