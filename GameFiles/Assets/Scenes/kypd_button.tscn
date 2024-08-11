@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://d266qq0odkwso"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Button.gd" id="1_852kp"]
+[ext_resource type="Texture2D" uid="uid://lf185t8rj6n" path="res://Assets/Sprites/Blinky Buttons.png" id="2_thmk0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdvxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smak7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hctxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3v3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8fco"]
+
+[node name="Button" type="Button"]
+offset_right = 6.0
+offset_bottom = 6.0
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rdvxp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_smak7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hctxi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t3v3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m8fco")
+flat = true
+script = ExtResource("1_852kp")
+button_num = null
+sprite_position = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_thmk0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 32, 6, 6)
