@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="4_aki0s"]
 [ext_resource type="Texture2D" uid="uid://ctthrny22fru8" path="res://Assets/Sprites/Vending Base1.png" id="5_b66he"]
 [ext_resource type="Texture2D" uid="uid://2a15j7xyg3is" path="res://Assets/Sprites/placeholderbutton.png" id="6_3gegj"]
-[ext_resource type="PackedScene" uid="uid://cgohg8t2182tr" path="res://Assets/Scenes/3x3_numpad.tscn" id="7_lrxiq"]
+[ext_resource type="PackedScene" uid="uid://cgohg8t2182tr" path="res://Assets/Scenes/3x3_letterpad.tscn" id="7_lrxiq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
 size = Vector2(150, 20)

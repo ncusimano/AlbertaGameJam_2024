@@ -33,7 +33,6 @@ func _on_button_pressed(number):
 
 
 func _on_button_released(number):
-	print("hey sup.")
 	if (number == current_button):
 		timer.stop()
 		print("Button " + str(current_button) + ": " + str(time_pressed))
