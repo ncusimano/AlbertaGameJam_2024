@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck2mtj8qgeq6o"]
+[gd_scene load_steps=6 format=3 uid="uid://dw0eb5fu17unx"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_x3hpi"]
 [ext_resource type="Script" path="res://keynum.gd" id="2_oudrw"]
@@ -224,8 +224,8 @@ script = ExtResource("2_oudrw")
 [connection signal="mouse_entered" from="Node2D2/Button4" to="Node2D2/Button4" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Node2D2/Button4" to="Node2D2/Button4" method="_on_button_4_pressed"]
 [connection signal="mouse_entered" from="Node2D2/Button5" to="Node2D2/Button5" method="_on_button_mouse_entered"]
-[connection signal="pressed" from="Node2D2/Button5" to="Node2D2/Button5" method="_on_pressed"]
 [connection signal="pressed" from="Node2D2/Button5" to="Node2D2/Button5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Node2D2/Button5" to="Node2D2/Button5" method="_on_pressed"]
 [connection signal="mouse_entered" from="Node2D2/Button6" to="Node2D2/Button6" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Node2D2/Button6" to="Node2D2" method="_on_button_6_pressed"]
 [connection signal="pressed" from="Node2D2/Button6" to="Node2D2/Button6" method="_on_pressed"]
