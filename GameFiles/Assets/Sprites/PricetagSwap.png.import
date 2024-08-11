@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ghndqyu2fmwh"
-path="res://.godot/imported/Vending Machine.png-0e6259c943fbf4fa50615a752a8c0289.ctex"
+uid="uid://5qcxigr486c0"
+path="res://.godot/imported/PricetagSwap.png-402f76e29d8af255e6e6e3f83feb62d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Vending Machine.png"
-dest_files=["res://.godot/imported/Vending Machine.png-0e6259c943fbf4fa50615a752a8c0289.ctex"]
+source_file="res://Assets/Sprites/PricetagSwap.png"
+dest_files=["res://.godot/imported/PricetagSwap.png-402f76e29d8af255e6e6e3f83feb62d5.ctex"]
 
 [params]
 

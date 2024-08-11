@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctthrny22fru8"
-path="res://.godot/imported/Vending Base1.png-7bfdfc2c3680ac81966771a28d2ff6db.ctex"
+uid="uid://bfb3pm4qd4bmn"
+path="res://.godot/imported/PriceisPanelOpen.png-c437a0fa5148c8965ca57b5612e40798.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Vending Base1.png"
-dest_files=["res://.godot/imported/Vending Base1.png-7bfdfc2c3680ac81966771a28d2ff6db.ctex"]
+source_file="res://Assets/Sprites/PriceisPanelOpen.png"
+dest_files=["res://.godot/imported/PriceisPanelOpen.png-c437a0fa5148c8965ca57b5612e40798.ctex"]
 
 [params]
 
