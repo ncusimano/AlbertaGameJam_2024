@@ -2,6 +2,8 @@ extends Button
 
 @export var button_num = 0
 @export var sprite_resource = "res://Assets/Sprites/Blinky Buttons.png"
+@export var sprite_offset_x = 0
+@export var sprite_offset_y = 0
 var sprite
 
 signal custom_button_pressed(number)
@@ -15,7 +17,9 @@ func _ready():
 	button_up.connect(_released)
 
 func set_sprite(offset_x, offset_y):
-	sprite.offset = Vector2(offset_x, offset_y)
+	sprite_offset_x = offset_x
+	sprite_offset_y = offset_y
+	sprite.region_rect.position = Vector2(offset_x, offset_y)
 
 func _pressed():
 	custom_button_pressed.emit(button_num)
