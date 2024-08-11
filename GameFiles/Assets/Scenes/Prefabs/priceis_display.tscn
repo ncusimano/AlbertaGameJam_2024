@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://cvsw2vn0c3m0q"]
+
+[ext_resource type="Texture2D" uid="uid://bolf045vtvcid" path="res://Assets/Sprites/BlinkyLetterPanelTransitiontoPriceis.png" id="1_rrb53"]
+[ext_resource type="Script" path="res://Assets/Scripts/PriceisDisplay.gd" id="2_ta2vt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37s2g"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(0, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbm2r"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(22, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0omux"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(44, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhn5d"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(66, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fflm"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(88, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18a76"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(110, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctv53"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(132, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7xla"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(154, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umwpv"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(176, 0, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohpgv"]
+atlas = ExtResource("1_rrb53")
+region = Rect2(198, 0, 22, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hschy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37s2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbm2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0omux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhn5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fflm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18a76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctv53")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_q7xla")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_umwpv")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_q7xla")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_ohpgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7xla")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 8.0
+}]
+
+[node name="PriceisDisplay" type="AnimatedSprite2D"]
+z_index = 4
+position = Vector2(29, -6)
+sprite_frames = SubResource("SpriteFrames_hschy")
+animation = &"Open"
+script = ExtResource("2_ta2vt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
