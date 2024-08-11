@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="1_65psk"]
 [ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_i8vgr"]
 [ext_resource type="Texture2D" uid="uid://dqhxlve2d7i67" path="res://Assets/Sprites/Background.png" id="4_aki0s"]
-[ext_resource type="PackedScene" uid="uid://ofmr1ro5xl1f" path="res://Assets/Scenes/blinky.tscn" id="7_6yd80"]
+[ext_resource type="PackedScene" uid="uid://dcyheg4jjhfj5" path="res://Assets/Scenes/blinky.tscn" id="7_6yd80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
 size = Vector2(150, 20)

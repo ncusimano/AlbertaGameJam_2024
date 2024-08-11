@@ -4,7 +4,7 @@ var MozartSprites = [
 	Vector2(93, 72)
 ]
 
-@export var MozartAudio  = {
+var MozartAudio  = {
 	"0": load("res://Assets/Sounds/C5.mp3"),
 	"1": load("res://Assets/Sounds/Csharp5.mp3"),
 	"2": load("res://Assets/Sounds/D5.mp3"),
@@ -26,6 +26,10 @@ var SucessCounter = 0
 var SpriteNode: Sprite2D = null
 var AudioPlayer: AudioStreamPlayer2D = null
 
+var victory_jingle = preload("res://Assets/Sounds/jingleFinal.mp3")
+
+signal solved()
+
 func _ready():
 	MozartInputs = []
 	SucessCounter = 0
@@ -41,7 +45,8 @@ func _on_button_custom_button_pressed(number):
 	SpriteNode.region_rect = Rect2(93 + (150 * (12 - number)), 72, 22, 54)
 	
 	AudioPlayer = $MozartAudio
-	AudioPlayer.set_stream(MozartAudio[str(0)])
+	AudioPlayer.set_stream(MozartAudio[str(11-number)])
+	AudioPlayer.play()
 	
 	MozartInputs.append(number)
 	for i in MozartInputs.size():
@@ -50,6 +55,13 @@ func _on_button_custom_button_pressed(number):
 			SucessCounter += 1
 			if SucessCounter == 10:
 				print("you won!")
+				solved.emit()
+
+				# Play win audio.
+				var audio_player = get_node("AudioStreamPlayer2D")
+				audio_player.set_stream(victory_jingle)
+				audio_player.play()
+
 				break
 		else:
 			print("wrong")
@@ -58,6 +70,6 @@ func _on_button_custom_button_pressed(number):
 	print("test")
 	print(MozartInputs)
 
-func _on_button_custom_button_released(number):
+func _on_button_custom_button_released(_number):
 	SpriteNode = $MozartSprite
 	SpriteNode.region_rect = Rect2(93, 72, 22, 54) # Replace with function body.

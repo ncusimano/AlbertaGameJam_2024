@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://c1wlsoy53i0fg"]
+[gd_scene load_steps=105 format=3 uid="uid://d3aytxnw8j5d7"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_mt46x"]
 [ext_resource type="Script" path="res://Assets/Scripts/Maincam.gd" id="2_l08fw"]
@@ -11,15 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://7rnj4f1lxecw" path="res://Assets/Sprites/Vending Output.png" id="9_orixa"]
 [ext_resource type="Texture2D" uid="uid://c4eqbsno14mnp" path="res://Assets/Sprites/Vending Base.png" id="10_6bl64"]
 [ext_resource type="Texture2D" uid="uid://q8ea5lpy25xp" path="res://Assets/Sprites/Coinslot.png" id="11_5j55u"]
-[ext_resource type="PackedScene" uid="uid://bgq76y8hqa1bx" path="res://Assets/Scenes/Prefabs/priceis_text.tscn" id="12_t0exp"]
+[ext_resource type="PackedScene" uid="uid://bto7haor3wo2" path="res://Assets/Scenes/Prefabs/priceis_text.tscn" id="12_t0exp"]
 [ext_resource type="Texture2D" uid="uid://bolf045vtvcid" path="res://Assets/Sprites/BlinkyLetterPanelTransitiontoPriceis.png" id="13_pn3g8"]
 [ext_resource type="Script" path="res://Assets/Scripts/PriceisDisplay.gd" id="14_dfa72"]
 [ext_resource type="Texture2D" uid="uid://bfb3pm4qd4bmn" path="res://Assets/Sprites/PriceisPanelOpen.png" id="15_cyv5o"]
 [ext_resource type="Texture2D" uid="uid://5qcxigr486c0" path="res://Assets/Sprites/PricetagSwap.png" id="16_h5v62"]
-[ext_resource type="PackedScene" uid="uid://ofmr1ro5xl1f" path="res://Assets/Scenes/blinky.tscn" id="18_70sqp"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/3x3_numpad.tscn" id="18_s5efe"]
-[ext_resource type="PackedScene" uid="uid://k5qmt2y6de7k" path="res://Assets/Scenes/transition_to_mozart.tscn" id="19_bertb"]
-[ext_resource type="PackedScene" uid="uid://cy4km34fi1fe6" path="res://Assets/Scenes/mozart.tscn" id="19_c26b1"]
+[ext_resource type="PackedScene" uid="uid://dcyheg4jjhfj5" path="res://Assets/Scenes/blinky.tscn" id="18_70sqp"]
+[ext_resource type="PackedScene" uid="uid://nmbhuk1x27uu" path="res://Assets/Scenes/3x3_numpad.tscn" id="18_s5efe"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/transition_to_mozart.tscn" id="19_bertb"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/mozart.tscn" id="19_c26b1"]
 [ext_resource type="Texture2D" uid="uid://ci1turygt840" path="res://Assets/Sprites/PriceistoMozart.png" id="20_q3p8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulrms"]
@@ -797,19 +797,22 @@ position = Vector2(19, -16)
 z_index = 10
 position = Vector2(18, -17.5)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Mozart"]
+
 [node name="TransitionToMozart" parent="." instance=ExtResource("19_bertb")]
 z_index = 5
 position = Vector2(18, -20.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TransitionToMozart"]
 sprite_frames = SubResource("SpriteFrames_ku2r0")
-frame = 41
 centered = false
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="TransitionToMozart"]
 libraries = {
 "": SubResource("AnimationLibrary_ekakt")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="mouse_entered" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/Upper Cam Collision" to="Camera2D" method="_on_area_2d_mouse_exited"]
